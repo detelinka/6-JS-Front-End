@@ -12,16 +12,15 @@ let empty = null;                       // Null
 ```
 ## Functions
 ```java script
-let greet = function() {           // Crеаting a function     
-    console.log("Hello!");         // Printing Hello!
-}    
-greet();                           // Hello!
-
-
-function add (x, y) {
-    return x + y;
+let greet = function() {}           // Function expression     
+function add (x, y) {}              // Function declaration
+greet();                            // Calling a function
+add(2, 3);                          // Calling a function with arguments
+let sum = add(2, 3);                // Storing the return value of a function
+console.log(sum);                   // Printing the return value of a function
+let multiply = function(x, y) {     // Function with return value
+    return x * y;
 }
-add(2, 3);                         // 5
 ```
 
 ## Comparison Operators
