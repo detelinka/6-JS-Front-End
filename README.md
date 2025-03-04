@@ -12,6 +12,7 @@ let empty = null;                       // Null
 ```
 ## Functions
 ```java script
+
 let greet = function() {}           // Function expression     
 function add (x, y) {}              // Function declaration
 greet();                            // Calling a function
@@ -19,9 +20,82 @@ add(2, 3);                          // Calling a function with arguments
 let sum = add(2, 3);                // Storing the return value of a function
 console.log(sum);                   // Printing the return value of a function
 let multiply = function(x, y) {     // Function with return value
-    return x * y;
+    return x * y;                   // Returning a value                               
 }
+function printDoc() {               // Fnction invoking another functions
+    printLabel();
+    printContent();
+}
+function countDown(n) {             // Recursive function (Self-invoking)
+    console.log(n);
+    if (n > 0) {countDown(n - 1);}
+}
+
+//Functions can be nested, i.e. hold other function
+function outer() {                // Outer function
+    function inner() {            // Inner function is only accessible within the outer function
+    
+    }
+}
+//Arrow functions
+let add = (x, y) => x + y;         // Arrow function
+let add = (x, y) => {              // Arrow function with multiple statements
+    let sum = x + y;
+    return sum;
+}
+let greeting = () => console.log("Hello"); // Arrow function with no arguments
+let greeting = name => console.log(`Hello ${name}`); // Arrow function with one argument
+let greeting = (name, age) => console.log(`Hello ${name}, you are ${age} years old`); // Arrow function with multiple arguments
+let multiply = (x, y) => x * y;    // Arrow function with return value
 ```
+
+### Loops
+```java script
+
+// For loop
+for (let i = 0; i < 5; i++) {       // For loop
+    console.log(i);
+}
+for (let i = 0; i < 5; i++) {       // For loop with break statement
+    if (i === 3) {break;}
+    console.log(i);
+}
+for (let i = 0; i < 5; i++) {       // For loop with continue statement
+    if (i === 3) {continue;}
+    console.log(i);
+}
+for (let word in ['apple', 'banana', 'cherry']) {  // For loop for arrays
+    console.log(word);                             // Prints the index
+}
+
+// While loop
+let i = 0;
+while (i < 5) {                     // While loop
+    console.log(i);
+    i++;
+}
+let i = 0;
+while (i < 5) {                     // While loop with break statement
+    if (i === 3) {break;}
+    console.log(i);
+    i++;
+}
+let i = 0;
+while (i < 5) {                     // While loop with continue statement
+    if (i === 3) {continue;}
+    console.log(i);
+    i++;
+}
+
+// Do-while loop
+let i = 0;
+do {                                // Do-while loop
+    console.log(i);
+    i++;
+} while (i < 5);
+```
+
+
 
 ## Comparison Operators
 ```java script
