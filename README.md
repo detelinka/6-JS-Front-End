@@ -49,7 +49,7 @@ let greeting = (name, age) => console.log(`Hello ${name}, you are ${age} years o
 let multiply = (x, y) => x * y;    // Arrow function with return value
 ```
 
-### Loops
+## Loops
 ```java script
 
 // For loop
